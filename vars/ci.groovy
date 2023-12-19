@@ -18,6 +18,12 @@ def call() {
         }
       }
 
+      stage('Integration Test Cases') {
+        steps {
+          echo 'Test Cases'
+        }
+      }
+
       stage('Build') {
         steps {
           echo 'Build'
