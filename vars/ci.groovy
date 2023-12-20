@@ -6,7 +6,7 @@ def call() {
       env.branchName = env.BRANCH_NAME
     }
     stage('Code Checkout') {
-      git branch: env.branchName, url: 'https://github.com/raghudevopsb76/expense-backend'
+      git branch: "${env.branchName}", url: 'https://github.com/raghudevopsb76/expense-backend'
     }
     stage('Compile') {}
 
