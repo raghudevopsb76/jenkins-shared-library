@@ -4,10 +4,11 @@ def call() {
     sh "find . | sed -e '1d' |xargs rm -rf"
 
     if(env.TAG_NAME ==~ ".*") {
-      env.branchName = env.TAG_NAME
+      env.branch_name = "refs/tags/${env.TAG_NAME}"
     } else {
-      env.branchName = env.BRANCH_NAME
+      env.branch_name = "${env.BRANCH_NAME}"
     }
+
     stage('Code Checkout') {
       //git branch: "${env.branchName}", url: 'https://github.com/raghudevopsb76/expense-backend'
       checkout scmGit(
