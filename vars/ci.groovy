@@ -11,10 +11,12 @@ def call() {
 
     stage('Code Checkout') {
       //git branch: "${env.branchName}", url: 'https://github.com/raghudevopsb76/expense-backend'
-      checkout scmGit(
-          branches: [[name: "${branch_name}"]],
-          userRemoteConfigs: [[url: "https://github.com/raghudevopsb76/expense-backend"]]
-      )
+//      checkout scmGit(
+//          branches: [[name: "${branch_name}"]],
+//          userRemoteConfigs: [[url: "https://github.com/raghudevopsb76/expense-backend"]]
+//      )
+      sh 'git clone https://github.com/raghudevopsb76/expense-backend .'
+      sh 'ls -l'
     }
 
     stage('Compile') {}
