@@ -24,6 +24,7 @@ def call() {
 
     stage('Compile') {}
 
+    sh 'env'
 
     if(env.BRANCH_NAME == "main") {
       sh 'echo main'
