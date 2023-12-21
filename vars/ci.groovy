@@ -9,6 +9,7 @@ def call() {
       env.branch_name = "${env.BRANCH_NAME}"
     }
 
+    sh 'env'
     stage('Code Checkout') {
       //git branch: "${env.branchName}", url: 'https://github.com/raghudevopsb76/expense-backend'
       checkout scmGit(
