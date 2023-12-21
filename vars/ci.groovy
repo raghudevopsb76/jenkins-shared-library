@@ -16,7 +16,7 @@ def call() {
 //          userRemoteConfigs: [[url: "https://github.com/raghudevopsb76/expense-backend"]]
 //      )
       sh 'git clone https://github.com/raghudevopsb76/expense-backend .'
-      sh 'git checkout ${branch_name}'
+      sh "git checkout ${branch_name}"
       sh 'cat Jenkinsfile'
     }
 
