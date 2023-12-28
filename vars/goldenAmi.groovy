@@ -5,7 +5,7 @@ def call() {
 
       stage('Terraform Apply') {
         sh 'terraform init'
-        //sh 'terraform apply -auto-approve'
+        sh 'terraform apply -auto-approve'
       }
 
       stage('Terraform Destroy') {
